@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NucleoMind 2026</title>
+  <meta name="description" content="Hackathon scientifique IA - NucleoMind" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="particles"></canvas>
+
+  <header class="nav glass">
+    <div class="container nav-wrap">
+      <div class="brand">NucleoMind</div>
+      <nav>
+        <a href="#about">À propos</a>
+        <a href="#programme">Programme</a>
+        <a href="#register">Inscription</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <p class="chip">AI • Science • Innovation</p>
+        <h1>NucleoMind 2026</h1>
+        <p class="slogan">Concevoir des solutions scientifiques innovantes grâce à l’IA</p>
+        <p class="meta">23–25 Avril 2026 · Cyber Espace · USTHB</p>
+        <a class="btn" href="#register">S’inscrire maintenant</a>
+      </div>
+      <div class="hero-illu floating reveal">
+        <img src="assets/Asset 3.svg" alt="NucleoMind Illustration" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="countdown">
+    <div class="container">
+      <div class="count-card">
+        <h2>Countdown — Début de l’événement</h2>
+        <div id="eventCountdown" class="count-value"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="about">
+  <div class="container">
+    <article class="glass card about-clean">
+      <h2>À propos de NucleoMind</h2>
+      <p>
+        NucleoMind est un hackathon scientifique de 48h dédié à la création de solutions innovantes
+        grâce à l’intelligence artificielle.
+        L’événement réunit étudiants, jeunes diplômés, développeurs, designers et porteurs d’idées
+        autour de 4 axes : Santé & biomédical, Environnement & durabilité, Industrie & procédés,
+        Data & systèmes intelligents.
+      </p>
+      <p>
+        📍 Cyber Espace, USTHB &nbsp; • &nbsp; 📅 23–25 avril 2026
+      </p>
+    </article>
+  </div>
+</section>
+
+  <section class="section reveal" id="programme">
+    <div class="container glass card">
+      <h2>Programme</h2>
+      <p><strong>Inscriptions :</strong> 09 → 16 avril 2026</p>
+      <p><strong>Sélection :</strong> 16 avril 2026</p>
+      <div class="timeline">
+        <div><strong>Jour 1 (23 avril)</strong> : Accueil, équipes, ouverture, brainstorming.</div>
+        <div><strong>Jour 2 (24 avril)</strong> : Team building, développement, prototypage.</div>
+        <div><strong>Jour 3 (25 avril)</strong> : Pitch Day, résultats, clôture.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="register">
+    <div class="container glass card">
+      <h2>Formulaire d’inscription complet</h2>
+      <p class="small">
+        Conformément à la loi n°18-07 (10 juin 2018), complétée par la loi 25-11 (juillet 2025),
+        les données personnelles sont traitées dans le respect de la vie privée.
+      </p>
+
+      <form id="registrationForm" class="form-grid">
+        <input name="nom" placeholder="Nom" required />
+        <input name="prenom" placeholder="Prénom" required />
+        <input name="age" type="number" placeholder="Âge" required />
+        <input name="telephone" placeholder="Numéro de téléphone" required />
+        <input name="email" type="email" placeholder="Adresse mail" required />
+        <input name="wilaya" placeholder="Wilaya de résidence" required />
+
+        <select name="genre" required>
+          <option value="">Genre</option>
+          <option>Femme</option>
+          <option>Homme</option>
+        </select>
+
+        <input name="allergies" placeholder="Allergies / maladie chronique (si oui, préciser)" />
+
+        <select name="statut" required>
+          <option value="">Vous êtes</option>
+          <option>Étudiant/e</option>
+          <option>Fraîchement diplômé/e</option>
+          <option>Employé/e</option>
+          <option>Autre</option>
+        </select>
+
+        <input name="universite" placeholder="Université (ou diplômé de)" required />
+        <input name="matricule_etudiant" placeholder="Matricule carte étudiant" />
+        <input name="num_cin" placeholder="Numéro carte nationale" required />
+
+        <textarea name="motivation" rows="3" placeholder="Qu’est-ce qui vous pousse à participer ?" required></textarea>
+
+        <select name="thematique" required>
+          <option value="">Thématique souhaitée</option>
+          <option>Santé & biomédical</option>
+          <option>Environnement & durabilité</option>
+          <option>Industrie & procédés</option>
+          <option>Data & systèmes intelligents</option>
+        </select>
+
+        <select name="profil" required>
+          <option value="">Vous êtes un/e</option>
+          <option>Porteur/euse d’idées</option>
+          <option>Marketeur/euse</option>
+          <option>Développeur/euse web/app</option>
+          <option>Designer/euse</option>
+        </select>
+
+        <textarea name="idee" rows="3" placeholder="Si porteur/euse d’idées, décrire l’idée"></textarea>
+        <input name="vehicule" placeholder="Immatriculation véhicule (si véhiculé/e)" />
+        <textarea name="questions" rows="3" placeholder="Questions supplémentaires"></textarea>
+
+        <label class="check">
+          <input type="checkbox" name="consentement" required />
+          J’accepte le traitement de mes données personnelles.
+        </label>
+
+        <button class="btn" type="submit">Envoyer l’inscription</button>
+        <p id="formStatus"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <p>USTHB — Project Initiative Club</p>
+      <button id="openEndCountdown" class="btn small">Countdown fin hackathon</button>
+    </div>
+  </footer>
+
+  <!-- Modal fin -->
+  <div id="endModal" class="modal hidden">
+    <div class="modal-content glass">
+      <button id="closeEndCountdown" class="close-btn">✕</button>
+      <h2>Fin du hackathon</h2>
+      <div id="hackEndCountdown" class="count-value"></div>
+      <p class="end-msg">Dernière ligne droite : finalisez, testez, pitchez ✨</p>
+    </div>
+  </div>
+
+  <!-- Chatbot AI -->
+  <button id="chatToggle" class="chat-toggle">🤖</button>
+  <div id="chatBox" class="chat-box glass hidden">
+    <div class="chat-head">Assistant IA NucleoMind</div>
+    <div id="chatMessages" class="chat-messages"></div>
+    <div class="chat-input-wrap">
+      <input id="chatInput" placeholder="Pose une question..." />
+      <button id="chatSend">Envoyer</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
