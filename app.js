@@ -23,9 +23,11 @@ setInterval(updateCountdowns,1000); updateCountdowns();
 
 // ===== MODAL =====
 const modal = document.getElementById("endModal");
-document.getElementById("openEndCountdown").onclick = ()=> modal.classList.remove("hidden");
-document.getElementById("closeEndCountdown").onclick = ()=> modal.classList.add("hidden");
-modal.addEventListener("click",(e)=>{ if(e.target===modal) modal.classList.add("hidden"); });
+const openBtn = document.getElementById("openEndCountdown");
+const closeBtn = document.getElementById("closeEndCountdown");
+if(openBtn) openBtn.onclick = ()=> modal.classList.remove("hidden");
+if(closeBtn) closeBtn.onclick = ()=> modal.classList.add("hidden");
+if(modal) modal.addEventListener("click",(e)=>{ if(e.target===modal) modal.classList.add("hidden"); });
 
 // ===== REVEAL =====
 const obs = new IntersectionObserver((entries)=>{

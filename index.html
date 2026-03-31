@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NucleoMind 2026</title>
   <meta name="description" content="Hackathon scientifique IA - NucleoMind" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
+  <!-- Ambient background blobs -->
+  <div class="bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+
   <canvas id="particles"></canvas>
 
   <header class="nav glass">
     <div class="container nav-wrap">
-      <div class="brand">NucleoMind</div>
+      <a href="#" class="brand-link">
+        <img src="img/Asset 5.svg" alt="NucleoMind" class="brand-logo" />
+      </a>
       <nav>
         <a href="#about">À propos</a>
         <a href="#programme">Programme</a>
-        <a href="#register">Inscription</a>
+        <a href="#register" class="nav-cta">Inscription</a>
       </nav>
     </div>
   </header>
@@ -28,155 +36,256 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="reveal">
-        <p class="chip">AI • Science • Innovation</p>
-        <h1>NucleoMind 2026</h1>
-        <p class="slogan">Concevoir des solutions scientifiques innovantes grâce à l’IA</p>
-        <p class="meta">23–25 Avril 2026 · Cyber Espace · USTHB</p>
-        <a class="btn" href="#register">S’inscrire maintenant</a>
+        <p class="chip">🚀 AI • Science • Innovation</p>
+        <h1>Where The Lab Meets The Algorithm.</h1>
+        <p class="slogan">Concevoir des solutions scientifiques innovantes grâce à l'intelligence artificielle.</p>
+        <p class="meta">📍 Cyber Espace, USTHB &nbsp;•&nbsp;  23–25 Avril 2026</p>
+        <div class="hero-actions">
+          <a class="btn" href="#register">S'inscrire maintenant</a>
+          <a class="btn btn-outline" href="#programme">Voir le programme</a>
+        </div>
       </div>
       <div class="hero-illu floating reveal">
-        <img src="assets/Asset 3.svg" alt="NucleoMind Illustration" />
+        <img src="img/Asset 1@3x.png" alt="NucleoMind Illustration" />
       </div>
     </div>
   </section>
 
   <section class="section reveal" id="countdown">
     <div class="container">
-      <div class="count-card">
-        <h2>Countdown — Début de l’événement</h2>
-        <div id="eventCountdown" class="count-value"></div>
+      <div class="count-card glass">
+        
+        <h2>L'événement commence dans</h2>
+        <div id="eventCountdown" class="count-value">...</div>
       </div>
     </div>
   </section>
 
   <section class="section reveal" id="about">
-  <div class="container">
-    <article class="glass card about-clean">
-      <h2>À propos de NucleoMind</h2>
-      <p>
-        NucleoMind est un hackathon scientifique de 48h dédié à la création de solutions innovantes
-        grâce à l’intelligence artificielle.
-        L’événement réunit étudiants, jeunes diplômés, développeurs, designers et porteurs d’idées
-        autour de 4 axes : Santé & biomédical, Environnement & durabilité, Industrie & procédés,
-        Data & systèmes intelligents.
-      </p>
-      <p>
-        📍 Cyber Espace, USTHB &nbsp; • &nbsp; 📅 23–25 avril 2026
-      </p>
-    </article>
-  </div>
-</section>
+    <div class="container">
+      <article class="glass card about-clean">
+        <h2>À propos de NucleoMind</h2>
+        <p class="lead-text">
+          NucleoMind est un hackathon scientifique de 48h dédié à la création de solutions innovantes
+          grâce à l'intelligence artificielle.
+        </p>
+        <p>
+          L'événement réunit étudiants, jeunes diplômés, développeurs, designers et porteurs d'idées
+          autour de 4 axes stratégiques :
+        </p>
+        <div class="axes-grid">
+          <span class="axis axis-sante">⚕️ Santé & biomédical</span>
+          <span class="axis axis-env">🌱 Environnement & durabilité</span>
+          <span class="axis axis-indus">⚙️ Industrie & procédés</span>
+          <span class="axis axis-data">📊 Data & systèmes intelligents</span>
+        </div>
+      </article>
+    </div>
+  </section>
 
   <section class="section reveal" id="programme">
     <div class="container glass card">
       <h2>Programme</h2>
-      <p><strong>Inscriptions :</strong> 09 → 16 avril 2026</p>
-      <p><strong>Sélection :</strong> 16 avril 2026</p>
+
+      <div class="milestones">
+        <div class="milestone">
+          <div class="milestone-icon">📝</div>
+          <div class="milestone-info">
+            <span class="milestone-label">Inscriptions ouvertes</span>
+            <span class="milestone-date">09 → 16 Avril 2026</span>
+          </div>
+          <div class="milestone-line"></div>
+        </div>
+        <div class="milestone">
+          <div class="milestone-icon">🎯</div>
+          <div class="milestone-info">
+            <span class="milestone-label">Sélection des équipes</span>
+            <span class="milestone-date">16 Avril 2026</span>
+          </div>
+        </div>
+      </div>
+
       <div class="timeline">
-        <div><strong>Jour 1 (23 avril)</strong> : Accueil, équipes, ouverture, brainstorming.</div>
-        <div><strong>Jour 2 (24 avril)</strong> : Team building, développement, prototypage.</div>
-        <div><strong>Jour 3 (25 avril)</strong> : Pitch Day, résultats, clôture.</div>
+        <div class="timeline-day day-1">
+          <h3>Jour 1 <span>(23 avril)</span></h3>
+          <p>Accueil, formation des équipes, cérémonie d'ouverture et brainstorming intensif.</p>
+        </div>
+        <div class="timeline-day day-2">
+          <h3>Jour 2 <span>(24 avril)</span></h3>
+          <p>Team building, développement technique et prototypage rapide.</p>
+        </div>
+        <div class="timeline-day day-3">
+          <h3>Jour 3 <span>(25 avril)</span></h3>
+          <p>Pitch Day — présentation finale, délibération du jury et clôture.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section reveal" id="register">
-    <div class="container glass card">
-      <h2>Formulaire d’inscription complet</h2>
-      <p class="small">
-        Conformément à la loi n°18-07 (10 juin 2018), complétée par la loi 25-11 (juillet 2025),
+    <div class="container glass card register-card">
+      <div class="text-center">
+        <h2>Rejoignez l'Aventure !</h2>
+        <p class="slogan">Formulaire d'inscription complet</p>
+      </div>
+
+      <p class="disclaimer">
+        🔒 Conformément à la loi n°18-07 (10 juin 2018), complétée par la loi 25-11 (juillet 2025),
         les données personnelles sont traitées dans le respect de la vie privée.
       </p>
 
       <form id="registrationForm" class="form-grid">
-        <input name="nom" placeholder="Nom" required />
-        <input name="prenom" placeholder="Prénom" required />
-        <input name="age" type="number" placeholder="Âge" required />
-        <input name="telephone" placeholder="Numéro de téléphone" required />
-        <input name="email" type="email" placeholder="Adresse mail" required />
-        <input name="wilaya" placeholder="Wilaya de résidence" required />
+        <div class="input-group"><input name="nom" placeholder="Nom" required /></div>
+        <div class="input-group"><input name="prenom" placeholder="Prénom" required /></div>
+        <div class="input-group"><input name="age" type="number" placeholder="Âge" required /></div>
+        <div class="input-group"><input name="telephone" placeholder="Numéro de téléphone" required /></div>
+        <div class="input-group full-width"><input name="email" type="email" placeholder="Adresse mail" required />
+        </div>
+        <div class="input-group full-width"><input name="wilaya" placeholder="Wilaya de résidence" required /></div>
 
-        <select name="genre" required>
-          <option value="">Genre</option>
-          <option>Femme</option>
-          <option>Homme</option>
-        </select>
+        <div class="input-group">
+          <select name="genre" required>
+            <option value="">Genre</option>
+            <option>Femme</option>
+            <option>Homme</option>
+          </select>
+        </div>
 
-        <input name="allergies" placeholder="Allergies / maladie chronique (si oui, préciser)" />
+        <div class="input-group full-width">
+          <input name="allergies" placeholder="Allergies / maladie chronique (si oui, préciser)" />
+        </div>
 
-        <select name="statut" required>
-          <option value="">Vous êtes</option>
-          <option>Étudiant/e</option>
-          <option>Fraîchement diplômé/e</option>
-          <option>Employé/e</option>
-          <option>Autre</option>
-        </select>
+        <div class="input-group">
+          <select name="statut" required>
+            <option value="">Vous êtes...</option>
+            <option>Étudiant/e</option>
+            <option>Fraîchement diplômé/e</option>
+            <option>Employé/e</option>
+            <option>Autre</option>
+          </select>
+        </div>
 
-        <input name="universite" placeholder="Université (ou diplômé de)" required />
-        <input name="matricule_etudiant" placeholder="Matricule carte étudiant" />
-        <input name="num_cin" placeholder="Numéro carte nationale" required />
+        <div class="input-group"><input name="universite" placeholder="Université (ou diplômé de)" required /></div>
+        <div class="input-group"><input name="matricule_etudiant" placeholder="Matricule carte étudiant" /></div>
+        <div class="input-group"><input name="num_cin" placeholder="Numéro carte nationale" required /></div>
 
-        <textarea name="motivation" rows="3" placeholder="Qu’est-ce qui vous pousse à participer ?" required></textarea>
+        <div class="input-group full-width">
+          <textarea name="motivation" rows="3" placeholder="Qu'est-ce qui vous pousse à participer ?"
+            required></textarea>
+        </div>
 
-        <select name="thematique" required>
-          <option value="">Thématique souhaitée</option>
-          <option>Santé & biomédical</option>
-          <option>Environnement & durabilité</option>
-          <option>Industrie & procédés</option>
-          <option>Data & systèmes intelligents</option>
-        </select>
+        <div class="input-group full-width">
+          <select name="thematique" required>
+            <option value="">Thématique souhaitée</option>
+            <option>Santé & biomédical</option>
+            <option>Environnement & durabilité</option>
+            <option>Industrie & procédés</option>
+            <option>Data & systèmes intelligents</option>
+          </select>
+        </div>
 
-        <select name="profil" required>
-          <option value="">Vous êtes un/e</option>
-          <option>Porteur/euse d’idées</option>
-          <option>Marketeur/euse</option>
-          <option>Développeur/euse web/app</option>
-          <option>Designer/euse</option>
-        </select>
+        <div class="input-group full-width">
+          <select name="profil" required>
+            <option value="">Vous êtes un/e</option>
+            <option>Porteur/euse d'idées</option>
+            <option>Marketeur/euse</option>
+            <option>Développeur/euse web/app</option>
+            <option>Designer/euse</option>
+          </select>
+        </div>
 
-        <textarea name="idee" rows="3" placeholder="Si porteur/euse d’idées, décrire l’idée"></textarea>
-        <input name="vehicule" placeholder="Immatriculation véhicule (si véhiculé/e)" />
-        <textarea name="questions" rows="3" placeholder="Questions supplémentaires"></textarea>
+        <div class="input-group full-width">
+          <textarea name="idee" rows="3" placeholder="Si porteur/euse d'idées, décrire l'idée"></textarea>
+        </div>
+        <div class="input-group full-width">
+          <input name="vehicule" placeholder="Immatriculation véhicule (si véhiculé/e)" />
+        </div>
+        <div class="input-group full-width">
+          <textarea name="questions" rows="2" placeholder="Questions supplémentaires"></textarea>
+        </div>
 
-        <label class="check">
+        <label class="check full-width">
           <input type="checkbox" name="consentement" required />
-          J’accepte le traitement de mes données personnelles.
+          <span>J'accepte le traitement de mes données personnelles.</span>
         </label>
 
-        <button class="btn" type="submit">Envoyer l’inscription</button>
-        <p id="formStatus"></p>
+        <button class="btn full-width submit-btn" type="submit">Envoyer l'inscription</button>
+        <p id="formStatus" class="full-width"></p>
       </form>
     </div>
   </section>
 
   <footer class="footer">
-    <div class="container footer-wrap">
-      <p>USTHB — Project Initiative Club</p>
-      <button id="openEndCountdown" class="btn small">Countdown fin hackathon</button>
+    <div class="container">
+      <div class="footer-card glass">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="img/Asset 5.svg" alt="NucleoMind" class="footer-logo" />
+            <p class="footer-tagline">Where The Lab Meets The Algorithm.</p>
+          </div>
+          
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-contacts">
+          <div class="contact-pill">
+            <span class="pill-label">Chef de projet</span>
+            <strong>ALLOUCHE Mohamed Djawed</strong>
+            <span>0771 59 65 90</span>
+          </div>
+          <div class="contact-pill">
+            <span class="pill-label">Sous-chef</span>
+            <strong>Yacine Taieb</strong>
+            <span>0551 66 09 54</span>
+          </div>
+          <div class="contact-pill">
+            <span class="pill-label">Email</span>
+            <a href="mailto:projectinitiative@gmail.com">projectinitiative@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+          <p>Organisé par <strong>Project Initiative Club</strong> · USTHB, Alger</p>
+          <p class="footer-copy">© 2026 NucleoMind — Tous droits réservés.</p>
+        </div>
+      </div>
     </div>
   </footer>
 
   <!-- Modal fin -->
   <div id="endModal" class="modal hidden">
-    <div class="modal-content glass">
+    <div class="modal-content glass text-center">
       <button id="closeEndCountdown" class="close-btn">✕</button>
       <h2>Fin du hackathon</h2>
-      <div id="hackEndCountdown" class="count-value"></div>
+      <div id="hackEndCountdown" class="count-value">...</div>
       <p class="end-msg">Dernière ligne droite : finalisez, testez, pitchez ✨</p>
     </div>
   </div>
 
   <!-- Chatbot AI -->
-  <button id="chatToggle" class="chat-toggle">🤖</button>
+  <button id="chatToggle" class="chat-toggle">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+  </button>
   <div id="chatBox" class="chat-box glass hidden">
-    <div class="chat-head">Assistant IA NucleoMind</div>
-    <div id="chatMessages" class="chat-messages"></div>
+    <div class="chat-head">🤖 Assistant NucleoMind</div>
+    <div id="chatMessages" class="chat-messages">
+      <div class="msg bot">Bonjour ! Comment puis-je vous aider ?</div>
+    </div>
     <div class="chat-input-wrap">
-      <input id="chatInput" placeholder="Pose une question..." />
-      <button id="chatSend">Envoyer</button>
+      <input id="chatInput" placeholder="Posez votre question..." />
+      <button id="chatSend">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
     </div>
   </div>
 
   <script src="app.js"></script>
 </body>
+
 </html>
