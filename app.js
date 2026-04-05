@@ -35,6 +35,28 @@ const obs = new IntersectionObserver((entries)=>{
 },{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
 
+// ===== PROGRAMME TABS =====
+const progTabs = document.querySelectorAll(".prog-tab");
+const progPanels = document.querySelectorAll(".prog-panel");
+
+progTabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    const day = tab.dataset.day;
+
+    // Update tabs
+    progTabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+
+    // Update panels
+    progPanels.forEach(p => {
+      p.classList.remove("active");
+      if (p.dataset.panel === day) {
+        p.classList.add("active");
+      }
+    });
+  });
+});
+
 // ===== PARTICLES =====
 const c = document.getElementById("particles");
 const ctx = c.getContext("2d");

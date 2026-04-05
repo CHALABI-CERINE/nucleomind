@@ -99,56 +99,210 @@
 
   <section class="section reveal" id="programme">
     <div class="container">
-      <div class="glass card programme-wrapper">
-        <div class="programme-header text-center">
-          <h2>L'Agenda du Hackathon</h2>
-          <p class="slogan">Trois jours pour transformer une idée en prototype fonctionnel.</p>
+      <!-- Section Header -->
+      <div class="prog-header text-center">
+        <p class="chip">📅 Programme</p>
+        <h2>L'Agenda du Hackathon</h2>
+        <p class="slogan">Trois jours pour transformer une idée en prototype fonctionnel.</p>
+      </div>
+
+      <!-- Milestone Tracker -->
+      <div class="prog-milestones">
+        <div class="prog-ms-card">
+          <div class="prog-ms-dot dot-active"></div>
+          <span class="prog-ms-label">Inscriptions</span>
+          <span class="prog-ms-date">09 → 16 Avril</span>
+        </div>
+        <div class="prog-ms-line"></div>
+        <div class="prog-ms-card">
+          <div class="prog-ms-dot"></div>
+          <span class="prog-ms-label">Sélection</span>
+          <span class="prog-ms-date">16 Avril</span>
+        </div>
+        <div class="prog-ms-line"></div>
+        <div class="prog-ms-card">
+          <div class="prog-ms-dot"></div>
+          <span class="prog-ms-label">Hackathon</span>
+          <span class="prog-ms-date">23 — 25 Avril</span>
+        </div>
+      </div>
+
+      <!-- Day Tabs -->
+      <div class="prog-tabs" id="progTabs">
+        <button class="prog-tab active" data-day="1">
+          <span class="prog-tab-num">01</span>
+          <span class="prog-tab-name">L'Étincelle</span>
+          <span class="prog-tab-date">23 Avril</span>
+        </button>
+        <button class="prog-tab" data-day="2">
+          <span class="prog-tab-num">02</span>
+          <span class="prog-tab-name">L'Accélération</span>
+          <span class="prog-tab-date">24 Avril</span>
+        </button>
+        <button class="prog-tab" data-day="3">
+          <span class="prog-tab-num">03</span>
+          <span class="prog-tab-name">Le Verdict</span>
+          <span class="prog-tab-date">25 Avril</span>
+        </button>
+      </div>
+
+      <!-- Day Panels -->
+      <div class="prog-panels" id="progPanels">
+        <!-- Day 1 -->
+        <div class="prog-panel active" data-panel="1">
+          <div class="prog-day-hero day-hero-1">
+            <div class="prog-day-hero-content">
+              <h3>L'Étincelle</h3>
+              <p>Le début de l'aventure — rencontre, inspiration et brainstorming.</p>
+            </div>
+            <div class="prog-day-hero-number">01</div>
+          </div>
+          <div class="prog-events">
+            <div class="prog-event">
+              <div class="prog-event-time">08:30</div>
+              <div class="prog-event-dot"></div>
+              <div class="prog-event-body">
+                <h4>Accueil & Check-in</h4>
+                <p>Enregistrement des participants, badges et kits de bienvenue.</p>
+              </div>
+            </div>
+            <div class="prog-event">
+              <div class="prog-event-time">09:30</div>
+              <div class="prog-event-dot"></div>
+              <div class="prog-event-body">
+                <h4>Cérémonie d'ouverture</h4>
+                <p>Discours officiels, présentation des thématiques et règles du jeu.</p>
+              </div>
+            </div>
+            <div class="prog-event">
+              <div class="prog-event-time">11:00</div>
+              <div class="prog-event-dot"></div>
+              <div class="prog-event-body">
+                <h4>Formation des équipes</h4>
+                <p>Constitution stratégique des équipes pluridisciplinaires.</p>
+              </div>
+            </div>
+            <div class="prog-event">
+              <div class="prog-event-time">14:00</div>
+              <div class="prog-event-dot"></div>
+              <div class="prog-event-body">
+                <h4>Brainstorming intensif</h4>
+                <p>Workshops guidés de génération d'idées et validation de concepts.</p>
+              </div>
+            </div>
+            <div class="prog-event">
+              <div class="prog-event-time">18:00</div>
+              <div class="prog-event-dot"></div>
+              <div class="prog-event-body">
+                <h4>Début du développement</h4>
+                <p>Les équipes commencent à transformer leurs idées en prototypes.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="milestones enhanced-milestones">
-          <div class="milestone">
-            <div class="milestone-icon">📝</div>
-            <div class="milestone-info">
-              <span class="milestone-label">Inscriptions Ouvertes</span>
-              <span class="milestone-date">09 → 16 Avril 2026</span>
+        <!-- Day 2 -->
+        <div class="prog-panel" data-panel="2">
+          <div class="prog-day-hero day-hero-2">
+            <div class="prog-day-hero-content">
+              <h3>L'Accélération</h3>
+              <p>Plongée technique, mentorat expert et prototypage rapide.</p>
             </div>
+            <div class="prog-day-hero-number">02</div>
           </div>
-          <div class="milestone-connector">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-dark)" stroke-width="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </div>
-          <div class="milestone">
-            <div class="milestone-icon">🎯</div>
-            <div class="milestone-info">
-              <span class="milestone-label">Sélection des Équipes</span>
-              <span class="milestone-date">16 Avril 2026</span>
+          <div class="prog-events">
+            <div class="prog-event">
+              <div class="prog-event-time">08:00</div>
+              <div class="prog-event-dot"></div>
+              <div class="prog-event-body">
+                <h4>Petit-déjeuner & Recap</h4>
+                <p>Point d'avancement et planification de la journée.</p>
+              </div>
+            </div>
+            <div class="prog-event">
+              <div class="prog-event-time">09:00</div>
+              <div class="prog-event-dot"></div>
+              <div class="prog-event-body">
+                <h4>Sessions de mentorat</h4>
+                <p>Accompagnement personnalisé par des experts IA et métier.</p>
+              </div>
+            </div>
+            <div class="prog-event">
+              <div class="prog-event-time">12:00</div>
+              <div class="prog-event-dot"></div>
+              <div class="prog-event-body">
+                <h4>Team Building & Pause</h4>
+                <p>Activités de cohésion, déjeuner et networking entre équipes.</p>
+              </div>
+            </div>
+            <div class="prog-event">
+              <div class="prog-event-time">14:00</div>
+              <div class="prog-event-dot"></div>
+              <div class="prog-event-body">
+                <h4>Sprint de développement</h4>
+                <p>Phase intensive de codage, intégration IA et tests.</p>
+              </div>
+            </div>
+            <div class="prog-event">
+              <div class="prog-event-time">22:00</div>
+              <div class="prog-event-dot"></div>
+              <div class="prog-event-body">
+                <h4>Nuit blanche 🌙</h4>
+                <p>Pour les plus braves : finalisation nocturne avec ravitaillement continu.</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="timeline modern-timeline">
-          <div class="timeline-day day-1">
-            <div class="day-badge">Jour 1</div>
-            <div class="day-content">
-              <h3>L'Étincelle <span>(23 avril)</span></h3>
-              <p>Accueil des participants, formation stratégique des équipes, cérémonie d'ouverture et début du
-                brainstorming intensif.</p>
+        <!-- Day 3 -->
+        <div class="prog-panel" data-panel="3">
+          <div class="prog-day-hero day-hero-3">
+            <div class="prog-day-hero-content">
+              <h3>Le Verdict</h3>
+              <p>L'heure des pitchs, du jury et de la consécration.</p>
             </div>
+            <div class="prog-day-hero-number">03</div>
           </div>
-          <div class="timeline-day day-2">
-            <div class="day-badge">Jour 2</div>
-            <div class="day-content">
-              <h3>L'Accélération <span>(24 avril)</span></h3>
-              <p>Mentorat par des experts, team building, développement technique et prototypage rapide (nuit blanche
-                pour les plus braves !).</p>
+          <div class="prog-events">
+            <div class="prog-event">
+              <div class="prog-event-time">08:00</div>
+              <div class="prog-event-dot"></div>
+              <div class="prog-event-body">
+                <h4>Derniers ajustements</h4>
+                <p>Finalisation des prototypes, tests et préparation des démos.</p>
+              </div>
             </div>
-          </div>
-          <div class="timeline-day day-3">
-            <div class="day-badge">Jour 3</div>
-            <div class="day-content">
-              <h3>Le Verdict <span>(25 avril)</span></h3>
-              <p>Derniers ajustements, Pitch Day devant le jury d'experts, délibération et cérémonie de clôture.</p>
+            <div class="prog-event">
+              <div class="prog-event-time">10:00</div>
+              <div class="prog-event-dot"></div>
+              <div class="prog-event-body">
+                <h4>Soumission des projets</h4>
+                <p>Upload des livrables et documentation technique.</p>
+              </div>
+            </div>
+            <div class="prog-event">
+              <div class="prog-event-time">11:00</div>
+              <div class="prog-event-dot"></div>
+              <div class="prog-event-body">
+                <h4>Pitch Day 🎤</h4>
+                <p>Chaque équipe présente sa solution devant le jury d'experts.</p>
+              </div>
+            </div>
+            <div class="prog-event">
+              <div class="prog-event-time">15:00</div>
+              <div class="prog-event-dot"></div>
+              <div class="prog-event-body">
+                <h4>Délibération du jury</h4>
+                <p>Le jury évalue les projets selon les critères d'innovation et faisabilité.</p>
+              </div>
+            </div>
+            <div class="prog-event">
+              <div class="prog-event-time">16:30</div>
+              <div class="prog-event-dot"></div>
+              <div class="prog-event-body">
+                <h4>Cérémonie de clôture 🏆</h4>
+                <p>Annonce des gagnants, remise des prix et célébration collective.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -278,13 +432,11 @@
             </strong>
             <span>0542075832</span>
           </div>
-          <div class="contact-pill">
-            <span class="pill-label">Email</span>
-            <a href="mailto:projectinitiativeclub@gmail.com">projectinitiativeclub@gmail.com</a>
-          </div>
+
         </div>
         <div class="footer-divider"></div>
         <div class="footer-bottom">
+          <p>projectinitiativeclub@gmail.com</p>
           <p>Organisé par <strong>Project Initiative Club</strong> · USTHB, Alger</p>
           <p class="footer-copy">© 2026 NucleoMind — Tous droits réservés.</p>
         </div>
