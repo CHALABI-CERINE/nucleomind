@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" id="html-root">
 
 <head>
   <meta charset="UTF-8" />
@@ -26,9 +26,14 @@
         <img src="img/Asset 5.svg" alt="NucleoMind" class="brand-logo" />
       </a>
       <nav>
-        <a href="#about">À propos</a>
-        <a href="#programme">Programme</a>
-        <a href="#register" class="nav-cta">Inscription</a>
+        <a href="#about" data-i18n="nav_about">À propos</a>
+        <a href="#programme" data-i18n="nav_programme">Programme</a>
+        <a href="#register" class="nav-cta" data-i18n="nav_register">Inscription</a>
+        <!-- Language Toggle -->
+        <button id="langToggle" class="lang-toggle" aria-label="Switch language">
+          <span id="langFlag">🇬🇧</span>
+          <span id="langLabel">EN</span>
+        </button>
       </nav>
     </div>
   </header>
@@ -38,11 +43,11 @@
       <div class="reveal">
         <p class="chip">🚀 AI • Science • Innovation</p>
         <h1>Where The Lab Meets The Algorithm.</h1>
-        <p class="slogan">Concevoir des solutions scientifiques innovantes grâce à l'intelligence artificielle.</p>
-        <p class="meta">📍 Cyber Espace, USTHB &nbsp;•&nbsp; 23–25 Avril 2026</p>
+        <p class="slogan" data-i18n="hero_slogan">Concevoir des solutions scientifiques innovantes grâce à l'intelligence artificielle.</p>
+        <p class="meta">📍 USTHB, Alger &nbsp;•&nbsp; 23–25 Avril 2026</p>
         <div class="hero-actions">
-          <a class="btn" href="#register">S'inscrire maintenant</a>
-          <a class="btn btn-outline" href="#programme">Voir le programme</a>
+          <a class="btn" href="#register" data-i18n="hero_cta_register">S'inscrire maintenant</a>
+          <a class="btn btn-outline" href="#programme" data-i18n="hero_cta_programme">Voir le programme</a>
         </div>
       </div>
       <div class="hero-illu floating reveal">
@@ -54,8 +59,8 @@
   <section class="section reveal" id="countdown">
     <div class="container">
       <div class="count-card glass">
-        <p class="chip" style="margin-bottom: 10px;">⏳ Le compte à rebours est lancé</p>
-        <h2>Préparez-vous à innover</h2>
+        <p class="chip" style="margin-bottom: 10px;">⏳ <span data-i18n="countdown_chip">Le compte à rebours est lancé</span></p>
+        <h2 data-i18n="countdown_h2">Préparez-vous à innover</h2>
         <div id="eventCountdown" class="count-value gradient-text">...</div>
       </div>
     </div>
@@ -65,11 +70,11 @@
     <div class="container">
       <article class="glass card about-clean about-split">
         <div class="about-content">
-          <h2>Décodez l'avenir avec NucleoMind</h2>
+          <h2 data-i18n="about_h2">Décodez l'avenir avec NucleoMind</h2>
           <p class="lead-text">
-            <strong>48 heures d'effervescence scientifique</strong> pour repousser les limites du possible.
+            <strong data-i18n="about_lead_strong">48 heures d'effervescence scientifique</strong> <span data-i18n="about_lead_rest">pour repousser les limites du possible.</span>
           </p>
-          <p>
+          <p data-i18n="about_body">
             NucleoMind est bien plus qu'un hackathon : c'est un carrefour d'innovation où étudiants, développeurs et
             chercheurs fusionnent leurs talents. Votre mission ? Exploiter la puissance de l'Intelligence Artificielle
             pour résoudre des défis scientifiques majeurs.
@@ -78,19 +83,19 @@
         <div class="about-axes">
           <div class="axis-card axis-sante">
             <div class="axis-icon">⚕️</div>
-            <p>Santé & Biomédical</p>
+            <p data-i18n="axis_sante">Santé &amp; Biomédical</p>
           </div>
           <div class="axis-card axis-env">
             <div class="axis-icon">🌱</div>
-            <p>Environnement & Durabilité</p>
+            <p data-i18n="axis_env">Environnement &amp; Durabilité</p>
           </div>
           <div class="axis-card axis-indus">
             <div class="axis-icon">⚙️</div>
-            <p>Industrie & Procédés</p>
+            <p data-i18n="axis_indus">Industrie &amp; Procédés</p>
           </div>
           <div class="axis-card axis-data">
             <div class="axis-icon">📊</div>
-            <p>Data & Systèmes</p>
+            <p data-i18n="axis_data">Data &amp; Systèmes</p>
           </div>
         </div>
       </article>
@@ -101,28 +106,22 @@
     <div class="container">
       <!-- Section Header -->
       <div class="prog-header text-center">
-        <p class="chip">📅 Programme</p>
-        <h2>L'Agenda du Hackathon</h2>
-        <p class="slogan">Trois jours pour transformer une idée en prototype fonctionnel.</p>
+        <p class="chip">📅 <span data-i18n="prog_chip">Programme</span></p>
+        <h2 data-i18n="prog_h2">L'Agenda du Hackathon</h2>
+        <p class="slogan" data-i18n="prog_slogan">Trois jours pour transformer une idée en prototype fonctionnel.</p>
       </div>
 
-      <!-- Milestone Tracker -->
+      <!-- Milestone Tracker (2 milestones: Inscriptions → Hackathon) -->
       <div class="prog-milestones">
         <div class="prog-ms-card">
           <div class="prog-ms-dot dot-active"></div>
-          <span class="prog-ms-label">Inscriptions</span>
+          <span class="prog-ms-label" data-i18n="ms_inscriptions">Inscriptions</span>
           <span class="prog-ms-date">09 → 16 Avril</span>
         </div>
         <div class="prog-ms-line"></div>
         <div class="prog-ms-card">
           <div class="prog-ms-dot"></div>
-          <span class="prog-ms-label">Sélection</span>
-          <span class="prog-ms-date">16 Avril</span>
-        </div>
-        <div class="prog-ms-line"></div>
-        <div class="prog-ms-card">
-          <div class="prog-ms-dot"></div>
-          <span class="prog-ms-label">Hackathon</span>
+          <span class="prog-ms-label" data-i18n="ms_hackathon">Hackathon</span>
           <span class="prog-ms-date">23 — 25 Avril</span>
         </div>
       </div>
@@ -131,17 +130,17 @@
       <div class="prog-tabs" id="progTabs">
         <button class="prog-tab active" data-day="1">
           <span class="prog-tab-num">01</span>
-          <span class="prog-tab-name">L'Étincelle</span>
+          <span class="prog-tab-name" data-i18n="day1_name">L'Étincelle</span>
           <span class="prog-tab-date">23 Avril</span>
         </button>
         <button class="prog-tab" data-day="2">
           <span class="prog-tab-num">02</span>
-          <span class="prog-tab-name">L'Accélération</span>
+          <span class="prog-tab-name" data-i18n="day2_name">L'Accélération</span>
           <span class="prog-tab-date">24 Avril</span>
         </button>
         <button class="prog-tab" data-day="3">
           <span class="prog-tab-num">03</span>
-          <span class="prog-tab-name">Le Verdict</span>
+          <span class="prog-tab-name" data-i18n="day3_name">Le Verdict</span>
           <span class="prog-tab-date">25 Avril</span>
         </button>
       </div>
@@ -152,8 +151,8 @@
         <div class="prog-panel active" data-panel="1">
           <div class="prog-day-hero day-hero-1">
             <div class="prog-day-hero-content">
-              <h3>L'Étincelle</h3>
-              <p>Le début de l'aventure — rencontre, inspiration et brainstorming.</p>
+              <h3 data-i18n="day1_name">L'Étincelle</h3>
+              <p data-i18n="day1_desc">Le début de l'aventure — rencontre, inspiration et brainstorming.</p>
             </div>
             <div class="prog-day-hero-number">01</div>
           </div>
@@ -162,40 +161,40 @@
               <div class="prog-event-time">08:30</div>
               <div class="prog-event-dot"></div>
               <div class="prog-event-body">
-                <h4>Accueil & Check-in</h4>
-                <p>Enregistrement des participants, badges et kits de bienvenue.</p>
+                <h4 data-i18n="d1e1_title">Accueil &amp; Check-in</h4>
+                <p data-i18n="d1e1_desc">Enregistrement des participants, badges et kits de bienvenue.</p>
               </div>
             </div>
             <div class="prog-event">
               <div class="prog-event-time">09:30</div>
               <div class="prog-event-dot"></div>
               <div class="prog-event-body">
-                <h4>Cérémonie d'ouverture</h4>
-                <p>Discours officiels, présentation des thématiques et règles du jeu.</p>
+                <h4 data-i18n="d1e2_title">Cérémonie d'ouverture</h4>
+                <p data-i18n="d1e2_desc">Discours officiels, présentation des thématiques et règles du jeu.</p>
               </div>
             </div>
             <div class="prog-event">
               <div class="prog-event-time">11:00</div>
               <div class="prog-event-dot"></div>
               <div class="prog-event-body">
-                <h4>Formation des équipes</h4>
-                <p>Constitution stratégique des équipes pluridisciplinaires.</p>
+                <h4 data-i18n="d1e3_title">Formation des équipes</h4>
+                <p data-i18n="d1e3_desc">Constitution stratégique des équipes pluridisciplinaires.</p>
               </div>
             </div>
             <div class="prog-event">
               <div class="prog-event-time">14:00</div>
               <div class="prog-event-dot"></div>
               <div class="prog-event-body">
-                <h4>Brainstorming intensif</h4>
-                <p>Workshops guidés de génération d'idées et validation de concepts.</p>
+                <h4 data-i18n="d1e4_title">Brainstorming intensif</h4>
+                <p data-i18n="d1e4_desc">Workshops guidés de génération d'idées et validation de concepts.</p>
               </div>
             </div>
             <div class="prog-event">
               <div class="prog-event-time">18:00</div>
               <div class="prog-event-dot"></div>
               <div class="prog-event-body">
-                <h4>Début du développement</h4>
-                <p>Les équipes commencent à transformer leurs idées en prototypes.</p>
+                <h4 data-i18n="d1e5_title">Début du développement</h4>
+                <p data-i18n="d1e5_desc">Les équipes commencent à transformer leurs idées en prototypes.</p>
               </div>
             </div>
           </div>
@@ -205,8 +204,8 @@
         <div class="prog-panel" data-panel="2">
           <div class="prog-day-hero day-hero-2">
             <div class="prog-day-hero-content">
-              <h3>L'Accélération</h3>
-              <p>Plongée technique, mentorat expert et prototypage rapide.</p>
+              <h3 data-i18n="day2_name">L'Accélération</h3>
+              <p data-i18n="day2_desc">Plongée technique, mentorat expert et prototypage rapide.</p>
             </div>
             <div class="prog-day-hero-number">02</div>
           </div>
@@ -215,40 +214,40 @@
               <div class="prog-event-time">08:00</div>
               <div class="prog-event-dot"></div>
               <div class="prog-event-body">
-                <h4>Petit-déjeuner & Recap</h4>
-                <p>Point d'avancement et planification de la journée.</p>
+                <h4 data-i18n="d2e1_title">Petit-déjeuner &amp; Recap</h4>
+                <p data-i18n="d2e1_desc">Point d'avancement et planification de la journée.</p>
               </div>
             </div>
             <div class="prog-event">
               <div class="prog-event-time">09:00</div>
               <div class="prog-event-dot"></div>
               <div class="prog-event-body">
-                <h4>Sessions de mentorat</h4>
-                <p>Accompagnement personnalisé par des experts IA et métier.</p>
+                <h4 data-i18n="d2e2_title">Sessions de mentorat</h4>
+                <p data-i18n="d2e2_desc">Accompagnement personnalisé par des experts IA et métier.</p>
               </div>
             </div>
             <div class="prog-event">
               <div class="prog-event-time">12:00</div>
               <div class="prog-event-dot"></div>
               <div class="prog-event-body">
-                <h4>Team Building & Pause</h4>
-                <p>Activités de cohésion, déjeuner et networking entre équipes.</p>
+                <h4 data-i18n="d2e3_title">Team Building &amp; Pause</h4>
+                <p data-i18n="d2e3_desc">Activités de cohésion, déjeuner et networking entre équipes.</p>
               </div>
             </div>
             <div class="prog-event">
               <div class="prog-event-time">14:00</div>
               <div class="prog-event-dot"></div>
               <div class="prog-event-body">
-                <h4>Sprint de développement</h4>
-                <p>Phase intensive de codage, intégration IA et tests.</p>
+                <h4 data-i18n="d2e4_title">Sprint de développement</h4>
+                <p data-i18n="d2e4_desc">Phase intensive de codage, intégration IA et tests.</p>
               </div>
             </div>
             <div class="prog-event">
               <div class="prog-event-time">22:00</div>
               <div class="prog-event-dot"></div>
               <div class="prog-event-body">
-                <h4>Nuit blanche 🌙</h4>
-                <p>Pour les plus braves : finalisation nocturne avec ravitaillement continu.</p>
+                <h4 data-i18n="d2e5_title">Nuit blanche 🌙</h4>
+                <p data-i18n="d2e5_desc">Pour les plus braves : finalisation nocturne avec ravitaillement continu.</p>
               </div>
             </div>
           </div>
@@ -258,8 +257,8 @@
         <div class="prog-panel" data-panel="3">
           <div class="prog-day-hero day-hero-3">
             <div class="prog-day-hero-content">
-              <h3>Le Verdict</h3>
-              <p>L'heure des pitchs, du jury et de la consécration.</p>
+              <h3 data-i18n="day3_name">Le Verdict</h3>
+              <p data-i18n="day3_desc">L'heure des pitchs, du jury et de la consécration.</p>
             </div>
             <div class="prog-day-hero-number">03</div>
           </div>
@@ -268,40 +267,40 @@
               <div class="prog-event-time">08:00</div>
               <div class="prog-event-dot"></div>
               <div class="prog-event-body">
-                <h4>Derniers ajustements</h4>
-                <p>Finalisation des prototypes, tests et préparation des démos.</p>
+                <h4 data-i18n="d3e1_title">Derniers ajustements</h4>
+                <p data-i18n="d3e1_desc">Finalisation des prototypes, tests et préparation des démos.</p>
               </div>
             </div>
             <div class="prog-event">
               <div class="prog-event-time">10:00</div>
               <div class="prog-event-dot"></div>
               <div class="prog-event-body">
-                <h4>Soumission des projets</h4>
-                <p>Upload des livrables et documentation technique.</p>
+                <h4 data-i18n="d3e2_title">Soumission des projets</h4>
+                <p data-i18n="d3e2_desc">Upload des livrables et documentation technique.</p>
               </div>
             </div>
             <div class="prog-event">
               <div class="prog-event-time">11:00</div>
               <div class="prog-event-dot"></div>
               <div class="prog-event-body">
-                <h4>Pitch Day 🎤</h4>
-                <p>Chaque équipe présente sa solution devant le jury d'experts.</p>
+                <h4 data-i18n="d3e3_title">Pitch Day 🎤</h4>
+                <p data-i18n="d3e3_desc">Chaque équipe présente sa solution devant le jury d'experts.</p>
               </div>
             </div>
             <div class="prog-event">
               <div class="prog-event-time">15:00</div>
               <div class="prog-event-dot"></div>
               <div class="prog-event-body">
-                <h4>Délibération du jury</h4>
-                <p>Le jury évalue les projets selon les critères d'innovation et faisabilité.</p>
+                <h4 data-i18n="d3e4_title">Délibération du jury</h4>
+                <p data-i18n="d3e4_desc">Le jury évalue les projets selon les critères d'innovation et faisabilité.</p>
               </div>
             </div>
             <div class="prog-event">
               <div class="prog-event-time">16:30</div>
               <div class="prog-event-dot"></div>
               <div class="prog-event-body">
-                <h4>Cérémonie de clôture 🏆</h4>
-                <p>Annonce des gagnants, remise des prix et célébration collective.</p>
+                <h4 data-i18n="d3e5_title">Cérémonie de clôture 🏆</h4>
+                <p data-i18n="d3e5_desc">Annonce des gagnants, remise des prix et célébration collective.</p>
               </div>
             </div>
           </div>
@@ -313,91 +312,89 @@
   <section class="section reveal" id="register">
     <div class="container glass card register-card">
       <div class="text-center">
-        <h2>Rejoignez l'Aventure !</h2>
-        <p class="slogan">Formulaire d'inscription complet</p>
+        <h2 data-i18n="form_h2">Rejoignez l'Aventure !</h2>
+        <p class="slogan" data-i18n="form_slogan">Formulaire d'inscription complet</p>
+        <p class="required-note" data-i18n="form_required_note">* Champ obligatoire</p>
       </div>
 
-      <p class="disclaimer">
+      <p class="disclaimer" data-i18n="form_disclaimer">
         🔒 Conformément à la loi n°18-07 (10 juin 2018), complétée par la loi 25-11 (juillet 2025),
         les données personnelles sont traitées dans le respect de la vie privée.
       </p>
 
       <form id="registrationForm" class="form-grid">
-        <div class="input-group"><input name="nom" placeholder="Nom" required /></div>
-        <div class="input-group"><input name="prenom" placeholder="Prénom" required /></div>
-        <div class="input-group"><input name="age" type="number" placeholder="Âge" required /></div>
-        <div class="input-group"><input name="telephone" placeholder="Numéro de téléphone" required /></div>
-        <div class="input-group full-width"><input name="email" type="email" placeholder="Adresse mail" required />
+        <div class="input-group"><input name="nom" data-i18n-ph="ph_nom" placeholder="Nom *" required /></div>
+        <div class="input-group"><input name="prenom" data-i18n-ph="ph_prenom" placeholder="Prénom *" required /></div>
+        <div class="input-group"><input name="age" type="number" data-i18n-ph="ph_age" placeholder="Âge *" required /></div>
+        <div class="input-group"><input name="telephone" data-i18n-ph="ph_telephone" placeholder="Numéro de téléphone *" required /></div>
+        <div class="input-group full-width"><input name="email" type="email" data-i18n-ph="ph_email" placeholder="Adresse mail *" required />
         </div>
-        <div class="input-group full-width"><input name="wilaya" placeholder="Wilaya de résidence" required /></div>
+        <div class="input-group full-width"><input name="wilaya" data-i18n-ph="ph_wilaya" placeholder="Wilaya de résidence *" required /></div>
 
         <div class="input-group">
           <select name="genre" required>
-            <option value="">Genre</option>
-            <option>Femme</option>
-            <option>Homme</option>
+            <option value="" data-i18n="opt_genre">Genre</option>
+            <option data-i18n="opt_femme">Femme</option>
+            <option data-i18n="opt_homme">Homme</option>
           </select>
         </div>
 
         <div class="input-group full-width">
-          <input name="allergies" placeholder="Allergies / maladie chronique (si oui, préciser)" />
+          <input name="allergies" data-i18n-ph="ph_allergies" placeholder="Allergies / maladie chronique (si oui, préciser)" />
         </div>
 
         <div class="input-group">
           <select name="statut" required>
-            <option value="">Vous êtes...</option>
-            <option>Étudiant/e</option>
-            <option>Fraîchement diplômé/e</option>
-            <option>Employé/e</option>
-            <option>Autre</option>
+            <option value="" data-i18n="opt_statut">Vous êtes...</option>
+            <option data-i18n="opt_etudiant">Étudiant/e</option>
+            <option data-i18n="opt_diplome">Fraîchement diplômé/e</option>
+            <option data-i18n="opt_employe">Employé/e</option>
+            <option data-i18n="opt_autre">Autre</option>
           </select>
         </div>
 
-        <div class="input-group"><input name="universite" placeholder="Université (ou diplômé de)" required /></div>
-        <div class="input-group"><input name="matricule_etudiant" placeholder="Matricule carte étudiant" /></div>
-        <div class="input-group"><input name="num_cin" placeholder="Numéro carte nationale" required /></div>
+        <div class="input-group"><input name="universite" data-i18n-ph="ph_universite" placeholder="Université (ou diplômé de) *" required /></div>
+        <div class="input-group"><input name="matricule_etudiant" data-i18n-ph="ph_matricule" placeholder="Matricule carte étudiant" /></div>
+        <div class="input-group"><input name="num_cin" data-i18n-ph="ph_cin" placeholder="Numéro carte nationale *" required /></div>
 
         <div class="input-group full-width">
-          <textarea name="motivation" rows="3" placeholder="Qu'est-ce qui vous pousse à participer ?"
+          <textarea name="motivation" rows="3" data-i18n-ph="ph_motivation" placeholder="Qu'est-ce qui vous pousse à participer ? *"
             required></textarea>
         </div>
 
         <div class="input-group full-width">
           <select name="thematique" required>
-            <option value="">Thématique souhaitée</option>
-            <option>Santé & biomédical</option>
-            <option>Environnement & durabilité</option>
-            <option>Industrie & procédés</option>
-            <option>Data & systèmes intelligents</option>
+            <option value="" data-i18n="opt_thematique">Thématique souhaitée</option>
+            <option data-i18n="opt_sante">Santé &amp; biomédical</option>
+            <option data-i18n="opt_env">Environnement &amp; durabilité</option>
+            <option data-i18n="opt_indus">Industrie &amp; procédés</option>
+            <option data-i18n="opt_data">Data &amp; systèmes intelligents</option>
           </select>
         </div>
 
+        <!-- Updated label + removed Porteur/euse d'idées -->
         <div class="input-group full-width">
           <select name="profil" required>
-            <option value="">Vous êtes un/e</option>
-            <option>Porteur/euse d'idées</option>
-            <option>Marketeur/euse</option>
-            <option>Développeur/euse web/app</option>
-            <option>Designer/euse</option>
+            <option value="" data-i18n="opt_profil_label">Dans l'équipe, vous souhaitez être :</option>
+            <option data-i18n="opt_marketeur">Marketeur/euse</option>
+            <option data-i18n="opt_dev">Développeur/euse web/app</option>
+            <option data-i18n="opt_designer">Designer/euse</option>
           </select>
         </div>
 
         <div class="input-group full-width">
-          <textarea name="idee" rows="3" placeholder="Si porteur/euse d'idées, décrire l'idée"></textarea>
+          <input name="vehicule" data-i18n-ph="ph_vehicule" placeholder="Immatriculation véhicule (si véhiculé/e)" />
         </div>
         <div class="input-group full-width">
-          <input name="vehicule" placeholder="Immatriculation véhicule (si véhiculé/e)" />
-        </div>
-        <div class="input-group full-width">
-          <textarea name="questions" rows="2" placeholder="Questions supplémentaires"></textarea>
+          <textarea name="questions" rows="2" data-i18n-ph="ph_questions" placeholder="Questions supplémentaires"></textarea>
         </div>
 
         <label class="check full-width">
           <input type="checkbox" name="consentement" required />
-          <span>J'accepte le traitement de mes données personnelles.</span>
+          <span data-i18n="consent_text">J'accepte le traitement de mes données personnelles.</span>
         </label>
 
-        <button class="btn full-width submit-btn" type="submit">Envoyer l'inscription</button>
+        <button class="btn full-width submit-btn" type="submit" data-i18n="submit_btn">Envoyer l'inscription</button>
         <p id="formStatus" class="full-width"></p>
       </form>
     </div>
@@ -416,29 +413,26 @@
         <div class="footer-divider"></div>
         <div class="footer-contacts">
           <div class="contact-pill">
-            <span class="pill-label">Chef de projet</span>
+            <span class="pill-label" data-i18n="contact_chef">Chef de projet</span>
             <strong>ALLOUCHE Mohamed Djawed</strong>
             <span>0771 59 65 90</span>
           </div>
           <div class="contact-pill">
-            <span class="pill-label">Sous-chef</span>
+            <span class="pill-label" data-i18n="contact_sous">Sous-chef de projet</span>
             <strong>TAIEB Yacine</strong>
             <span>0551 66 09 54</span>
           </div>
           <div class="contact-pill">
-            <span class="pill-label">Responsable relations externes :
-            </span>
-            <strong>DJAMAA Manel
-            </strong>
+            <span class="pill-label" data-i18n="contact_ext">Responsable relations externes</span>
+            <strong>DJAMAA Manel</strong>
             <span>0542075832</span>
           </div>
-
         </div>
         <div class="footer-divider"></div>
         <div class="footer-bottom">
           <p>projectinitiativeclub@gmail.com</p>
-          <p>Organisé par <strong>Project Initiative Club</strong> · USTHB, Alger</p>
-          <p class="footer-copy">© 2026 NucleoMind — Tous droits réservés.</p>
+          <p><span data-i18n="footer_org">Organisé par</span> <strong>Project Initiative Club</strong> · USTHB, Alger</p>
+          <p class="footer-copy" data-i18n="footer_copy">© 2026 NucleoMind — Tous droits réservés.</p>
         </div>
       </div>
     </div>
@@ -448,35 +442,13 @@
   <div id="endModal" class="modal hidden">
     <div class="modal-content glass text-center">
       <button id="closeEndCountdown" class="close-btn">✕</button>
-      <h2>Fin du hackathon</h2>
+      <h2 data-i18n="modal_title">Fin du hackathon</h2>
       <div id="hackEndCountdown" class="count-value">...</div>
-      <p class="end-msg">Dernière ligne droite : finalisez, testez, pitchez ✨</p>
+      <p class="end-msg" data-i18n="modal_msg">Dernière ligne droite : finalisez, testez, pitchez ✨</p>
     </div>
   </div>
 
-  <!-- Chatbot AI -->
-  <button id="chatToggle" class="chat-toggle">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-      stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-    </svg>
-  </button>
-  <div id="chatBox" class="chat-box glass hidden">
-    <div class="chat-head">🤖 Assistant NucleoMind</div>
-    <div id="chatMessages" class="chat-messages">
-      <div class="msg bot">Bonjour ! Comment puis-je vous aider ?</div>
-    </div>
-    <div class="chat-input-wrap">
-      <input id="chatInput" placeholder="Posez votre question..." />
-      <button id="chatSend">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <line x1="22" y1="2" x2="11" y2="13"></line>
-          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-        </svg>
-      </button>
-    </div>
-  </div>
+
 
   <script src="app.js"></script>
 </body>
