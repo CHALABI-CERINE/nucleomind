@@ -144,6 +144,11 @@ body {
   padding: 12px 24px;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
 .brand-link {
   display: flex;
   align-items: center;
