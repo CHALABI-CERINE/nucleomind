@@ -14,10 +14,10 @@ const i18n = {
     // Nav
     nav_about: "À propos",
     nav_programme: "Programme",
-    nav_register: "Inscription",
+    nav_register: "Programme",
     // Hero
     hero_slogan: "Concevoir des solutions scientifiques innovantes grâce à l'intelligence artificielle.",
-    hero_cta_register: "S'inscrire maintenant",
+    hero_cta_register: "Inscriptions fermées",
     hero_cta_programme: "Voir le programme",
     // Countdown
     countdown_chip: "Le compte à rebours est lancé",
@@ -58,11 +58,11 @@ const i18n = {
     d3e3_title: "Pitch moment 🎤",            d3e3_desc: "Chaque équipe présente sa solution devant le jury d'experts.",
     d3e4_title: "Délibération du jury",    d3e4_desc: "Le jury évalue les projets selon les critères d'innovation et faisabilité.",
     d3e5_title: "Cérémonie de clôture 🏆", d3e5_desc: "Annonce des gagnants, remise des prix et célébration collective.",
-    // Form
-    form_h2: "Rejoignez l'Aventure !",
-    form_slogan: "Formulaire d'inscription complet",
-    form_required_note: "* Champ obligatoire",
-    form_disclaimer: "🔒 Conformément à la loi n°18-07 (10 juin 2018), complétée par la loi 25-11 (juillet 2025), les données personnelles sont traitées dans le respect de la vie privée.",
+    // Closed registrations banner
+    closed_h2: "Inscriptions Fermées",
+    closed_slogan: "La période d'inscription est terminée.",
+    closed_body: "Les inscriptions pour NucleoMind 2026 étaient ouvertes du 09 au 19 Avril. Rendez-vous au hackathon les 23 — 25 Avril au HIS (Higher Institute of Sciences) !",
+    closed_cta: "Voir le programme",
     ph_nom: "Nom *", ph_prenom: "Prénom *", ph_age: "Âge *", ph_telephone: "Numéro de téléphone *",
     ph_email: "Adresse mail *", ph_wilaya: "Wilaya de résidence *",
     opt_genre: "Genre", opt_femme: "Femme", opt_homme: "Homme",
@@ -99,10 +99,10 @@ const i18n = {
     // Nav
     nav_about: "About",
     nav_programme: "Programme",
-    nav_register: "Register",
+    nav_register: "Programme",
     // Hero
     hero_slogan: "Designing innovative scientific solutions through artificial intelligence.",
-    hero_cta_register: "Register Now",
+    hero_cta_register: "Registrations Closed",
     hero_cta_programme: "View Programme",
     // Countdown
     countdown_chip: "The countdown has started",
@@ -143,11 +143,11 @@ const i18n = {
     d3e3_title: "Pitch moment 🎤",               d3e3_desc: "Each team presents their solution to the expert jury.",
     d3e4_title: "Jury Deliberation",          d3e4_desc: "The jury evaluates projects based on innovation and feasibility.",
     d3e5_title: "Closing Ceremony 🏆",        d3e5_desc: "Winner announcement, prize giving and collective celebration.",
-    // Form
-    form_h2: "Join the Adventure!",
-    form_slogan: "Complete registration form",
-    form_required_note: "* Required field",
-    form_disclaimer: "🔒 In accordance with law n°18-07 (10 June 2018), supplemented by law 25-11 (July 2025), personal data is processed with respect for privacy.",
+    // Closed registrations banner
+    closed_h2: "Registrations Closed",
+    closed_slogan: "The registration period has ended.",
+    closed_body: "Registrations for NucleoMind 2026 were open from 09 to 19 April. See you at the hackathon on 23 — 25 April at HIS (Higher Institute of Sciences)!",
+    closed_cta: "View Programme",
     ph_nom: "Last Name *", ph_prenom: "First Name *", ph_age: "Age *", ph_telephone: "Phone Number *",
     ph_email: "Email Address *", ph_wilaya: "Wilaya of Residence *",
     opt_genre: "Gender", opt_femme: "Female", opt_homme: "Male",
@@ -297,36 +297,5 @@ function loop(){
 }
 loop();
 
-// ===== FORM => GOOGLE SHEETS =====
-const form     = document.getElementById("registrationForm");
-const statusEl = document.getElementById("formStatus");
-
-form.addEventListener("submit", async (e)=>{
-  e.preventDefault();
-  const t = i18n[currentLang];
-  statusEl.textContent = t.status_sending;
-  statusEl.style.color = "";
-
-  const payload = Object.fromEntries(new FormData(form).entries());
-  payload.timestamp = new Date().toISOString();
-  payload.langue    = currentLang;
-
-  try{
-    const res = await fetch(SHEETS_WEBHOOK_URL, {
-      method: "POST",
-      // Google Apps Script requires no-cors or a CORS-enabled endpoint
-      // Using no-cors means we won't get a readable response but the data is sent
-      mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
-    // With no-cors the response is opaque (type = "opaque"), we treat it as success
-    statusEl.textContent = t.status_success;
-    statusEl.style.color = "#4ade80";
-    form.reset();
-  }catch(err){
-    statusEl.textContent = t.status_error;
-    statusEl.style.color = "#f87171";
-    console.error("Form error:", err);
-  }
-});
+// ===== REGISTRATIONS CLOSED =====
+// The registration form has been removed. Submissions are no longer accepted.

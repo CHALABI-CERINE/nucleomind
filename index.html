@@ -45,7 +45,7 @@
         <nav>
           <a href="#about" data-i18n="nav_about">À propos</a>
           <a href="#programme" data-i18n="nav_programme">Programme</a>
-          <a href="#register" class="nav-cta" data-i18n="nav_register">Inscription</a>
+          <a href="#programme" class="nav-cta" data-i18n="nav_register">Programme</a>
         </nav>
         <!-- Language Toggle -->
         <button id="langToggle" class="lang-toggle" aria-label="Switch language">
@@ -62,9 +62,9 @@
         <p class="chip">🚀 AI • Science • Innovation</p>
         <h1>Where The Lab Meets The Algorithm.</h1>
         <p class="slogan" data-i18n="hero_slogan">Concevoir des solutions scientifiques innovantes grâce à l'intelligence artificielle.</p>
-        <p class="meta">📍 USTHB, Alger &nbsp;•&nbsp; 23–25 Avril 2026</p>
+        <p class="meta">📍 HIS (Higher Institute of Sciences), Alger &nbsp;•&nbsp; 23–25 Avril 2026</p>
         <div class="hero-actions">
-          <a class="btn" href="#register" data-i18n="hero_cta_register">S'inscrire maintenant</a>
+          <a class="btn" href="#register" data-i18n="hero_cta_register">Inscriptions fermées</a>
           <a class="btn btn-outline" href="#programme" data-i18n="hero_cta_programme">Voir le programme</a>
         </div>
       </div>
@@ -132,13 +132,13 @@
       <!-- Milestone Tracker (2 milestones: Inscriptions → Hackathon) -->
       <div class="prog-milestones">
         <div class="prog-ms-card">
-          <div class="prog-ms-dot dot-active"></div>
+          <div class="prog-ms-dot dot-done"></div>
           <span class="prog-ms-label" data-i18n="ms_inscriptions">Inscriptions</span>
-          <span class="prog-ms-date">09 → 16 Avril</span>
+          <span class="prog-ms-date">09 → 19 Avril</span>
         </div>
-        <div class="prog-ms-line"></div>
+        <div class="prog-ms-line ms-line-done"></div>
         <div class="prog-ms-card">
-          <div class="prog-ms-dot"></div>
+          <div class="prog-ms-dot dot-active"></div>
           <span class="prog-ms-label" data-i18n="ms_hackathon">Hackathon</span>
           <span class="prog-ms-date">23 — 25 Avril</span>
         </div>
@@ -328,93 +328,17 @@
   </section>
 
   <section class="section reveal" id="register">
-    <div class="container glass card register-card">
-      <div class="text-center">
-        <h2 data-i18n="form_h2">Rejoignez l'Aventure !</h2>
-        <p class="slogan" data-i18n="form_slogan">Formulaire d'inscription complet</p>
-        <p class="required-note" data-i18n="form_required_note">* Champ obligatoire</p>
+    <div class="container">
+      <div class="glass card register-closed-card text-center">
+        <div class="closed-icon">🔒</div>
+        <h2 data-i18n="closed_h2">Inscriptions Fermées</h2>
+        <p class="slogan" data-i18n="closed_slogan">La période d'inscription est terminée.</p>
+        <p class="closed-body" data-i18n="closed_body">
+          Les inscriptions pour NucleoMind 2026 étaient ouvertes du 09 au 19 Avril.
+          Rendez-vous au hackathon les 23 — 25 Avril au HIS (Higher Institute of Sciences) !
+        </p>
+        <a class="btn" href="#programme" data-i18n="closed_cta">Voir le programme</a>
       </div>
-
-      <p class="disclaimer" data-i18n="form_disclaimer">
-        🔒 Conformément à la loi n°18-07 (10 juin 2018), complétée par la loi 25-11 (juillet 2025),
-        les données personnelles sont traitées dans le respect de la vie privée.
-      </p>
-
-      <form id="registrationForm" class="form-grid">
-        <div class="input-group"><input name="nom" data-i18n-ph="ph_nom" placeholder="Nom *" required /></div>
-        <div class="input-group"><input name="prenom" data-i18n-ph="ph_prenom" placeholder="Prénom *" required /></div>
-        <div class="input-group"><input name="age" type="number" data-i18n-ph="ph_age" placeholder="Âge *" required /></div>
-        <div class="input-group"><input name="telephone" data-i18n-ph="ph_telephone" placeholder="Numéro de téléphone *" required /></div>
-        <div class="input-group full-width"><input name="email" type="email" data-i18n-ph="ph_email" placeholder="Adresse mail *" required />
-        </div>
-        <div class="input-group full-width"><input name="wilaya" data-i18n-ph="ph_wilaya" placeholder="Wilaya de résidence *" required /></div>
-
-        <div class="input-group">
-          <select name="genre" required>
-            <option value="" data-i18n="opt_genre">Genre</option>
-            <option data-i18n="opt_femme">Femme</option>
-            <option data-i18n="opt_homme">Homme</option>
-          </select>
-        </div>
-
-        <div class="input-group full-width">
-          <input name="allergies" data-i18n-ph="ph_allergies" placeholder="Allergies / maladie chronique (si oui, préciser)" />
-        </div>
-
-        <div class="input-group">
-          <select name="statut" required>
-            <option value="" data-i18n="opt_statut">Vous êtes...</option>
-            <option data-i18n="opt_etudiant">Étudiant/e</option>
-            <option data-i18n="opt_diplome">Fraîchement diplômé/e</option>
-            <option data-i18n="opt_employe">Employé/e</option>
-            <option data-i18n="opt_autre">Autre</option>
-          </select>
-        </div>
-
-        <div class="input-group"><input name="universite" data-i18n-ph="ph_universite" placeholder="Université (ou diplômé de) *" required /></div>
-        <div class="input-group"><input name="matricule_etudiant" data-i18n-ph="ph_matricule" placeholder="Matricule carte étudiant" /></div>
-        <div class="input-group"><input name="num_cin" data-i18n-ph="ph_cin" placeholder="Numéro carte nationale *" required /></div>
-
-        <div class="input-group full-width">
-          <textarea name="motivation" rows="3" data-i18n-ph="ph_motivation" placeholder="Qu'est-ce qui vous pousse à participer ? *"
-            required></textarea>
-        </div>
-
-        <div class="input-group full-width">
-          <select name="thematique" required>
-            <option value="" data-i18n="opt_thematique">Thématique souhaitée</option>
-            <option data-i18n="opt_sante">Santé &amp; biomédical</option>
-            <option data-i18n="opt_env">Environnement &amp; durabilité</option>
-            <option data-i18n="opt_indus">Industrie &amp; procédés</option>
-            <option data-i18n="opt_data">Data &amp; systèmes intelligents</option>
-          </select>
-        </div>
-
-        <!-- Updated label + removed Porteur/euse d'idées -->
-        <div class="input-group full-width">
-          <select name="profil" required>
-            <option value="" data-i18n="opt_profil_label">Dans l'équipe, vous souhaitez être :</option>
-            <option data-i18n="opt_marketeur">Marketeur/euse</option>
-            <option data-i18n="opt_dev">Développeur/euse web/app</option>
-            <option data-i18n="opt_designer">Designer/euse</option>
-          </select>
-        </div>
-
-        <div class="input-group full-width">
-          <input name="vehicule" data-i18n-ph="ph_vehicule" placeholder="Immatriculation véhicule (si véhiculé/e)" />
-        </div>
-        <div class="input-group full-width">
-          <textarea name="questions" rows="2" data-i18n-ph="ph_questions" placeholder="Questions supplémentaires"></textarea>
-        </div>
-
-        <label class="check full-width">
-          <input type="checkbox" name="consentement" required />
-          <span data-i18n="consent_text">J'accepte le traitement de mes données personnelles.</span>
-        </label>
-
-        <button class="btn full-width submit-btn" type="submit" data-i18n="submit_btn">Envoyer l'inscription</button>
-        <p id="formStatus" class="full-width"></p>
-      </form>
     </div>
   </section>
 
@@ -449,7 +373,7 @@
         <div class="footer-divider"></div>
         <div class="footer-bottom">
           <p>projectinitiativeclub@gmail.com</p>
-          <p><span data-i18n="footer_org">Organisé par</span> <strong>Project Initiative Club</strong> · USTHB, Alger</p>
+          <p><span data-i18n="footer_org">Organisé par</span> <strong>Project Initiative Club</strong> · HIS (Higher Institute of Sciences), Alger</p>
           <p class="footer-copy" data-i18n="footer_copy">© 2026 NucleoMind — Tous droits réservés.</p>
         </div>
       </div>
